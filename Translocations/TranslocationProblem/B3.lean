@@ -1,4 +1,5 @@
-import Mathlib
+import Mathlib.Tactic
+import Batteries.Data.Vector.Lemmas
 
 structure B3Vec (n : Nat) where
   v : Vector Int n

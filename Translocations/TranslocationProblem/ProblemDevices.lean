@@ -7,6 +7,7 @@ import Mathlib.Data.List.Basic
 import Mathlib.Data.Finset.Basic
 import Mathlib.Data.Multiset.Basic
 import Mathlib.Tactic
+import Mathlib.Combinatorics.SimpleGraph.Finite
 
 def map_edge (v : Vector Int n) (p : Vector Int n) (u t : Fin n) : Int :=
   v.get t + p.get u - v.get u
@@ -29,6 +30,7 @@ structure InstanceWithParams (n : Nat) where
   p : Vector Int n
   e : Finset Int
 
+open scoped Classical in
 noncomputable def map_graph_to_translocation_pr_aux (g : SimpleGraph <| Fin n) (h : n > 0) :
   InstanceWithParams n :=
   have b := get_b3 (2 * n)

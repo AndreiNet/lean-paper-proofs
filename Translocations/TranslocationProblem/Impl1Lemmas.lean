@@ -1,5 +1,7 @@
 import TranslocationProblem.ProblemDevices
 import TranslocationProblem.Lemmas
+import Mathlib.Data.Vector.Basic
+import Mathlib.Data.List.Basic
 
 lemma walk_support {n} {g : SimpleGraph (Fin n)} {u v} (w : g.Walk u v) :
   ∀ hi: i < w.support.length, w.support[i] = w.getVert i := by
